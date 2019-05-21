@@ -1,20 +1,24 @@
 import java.util.Scanner;
-/**
- * Created by iyasuwatts on 10/17/17.
- */
-public class Main {
-    public static void main(String[] args ){
+
+public class Main 
+{
+    public static void main(String[] args )
+    {
         Scanner scan = new Scanner(System.in);
         System.out.println("Please, type your name...");
         String userName = scan.next();
-        
-        
-        
-        
-        
-        
-        
-        
-
+        if (userName == "Alice")
+        {
+            System.out.println("Hello, Alice!");
+        }
+        else if (userName == "Bob")
+        {
+            System.out.println("Hello, Bob!");
+        }
+        else
+        {
+            System.out.println("No greeting for you! Come back in one year.");
+        }
+   
     }
 }
