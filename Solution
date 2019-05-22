@@ -1,24 +1,23 @@
 import java.util.Scanner;
 
-public class Main 
-{
-    public static void main(String[] args )
-    {
-        Scanner scan = new Scanner(System.in);
+public class Main {
+    public static void main(String[] args ){
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Please, type your name...");
-        String userName = scan.next();
-        if (userName == "Alice")
+        String userName = scanner.nextLine();
+        
+        while (!userName.equals("Alice") && !userName.equals("Bob"))
+        {
+            System.out.println("Try another name");
+            userName = scanner.nextLine();
+        }
+        if (userName.equals("Alice"))
         {
             System.out.println("Hello, Alice!");
         }
-        else if (userName == "Bob")
-        {
-            System.out.println("Hello, Bob!");
-        }
         else
         {
-            System.out.println("No greeting for you! Come back in one year.");
-        }
-   
+            System.out.println("Hello, Bob!");
+        }    
     }
 }
